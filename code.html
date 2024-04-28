@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299.7">
+  <style type="text/css">
+    body {background-color: #f7f7f7}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; color: #e1b358; background-color: #202020}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; color: #99a8ba; background-color: #202020}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; color: #6d6d6d; background-color: #202020}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; color: #95b84f; background-color: #202020}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; color: #acacac; background-color: #202020}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; color: #e1b358; background-color: #202020; min-height: 16.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; color: #6d6d6d; background-color: #202020; min-height: 16.0px}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; color: #99a8ba; background-color: #202020; min-height: 16.0px}
+    span.s1 {color: #acacac}
+    span.s2 {color: #95b84f}
+    span.s3 {color: #e1b358}
+    span.s4 {color: #6d6d6d}
+    span.s5 {color: #99a8ba}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE <span class="s1">html</span>&gt;</p>
+<p class="p1">&lt;html <span class="s1">lang</span><span class="s2">="en"</span>&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta <span class="s1">charset</span><span class="s2">="UTF-8"</span>&gt;</p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span>&lt;title&gt;</span>3D Scatter Plot with Larger Labels and Axis Names<span class="s3">&lt;/title&gt;</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span>&lt;!-- Include A-frame Library --&gt;</p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;script </span><span class="s1">src</span>="https://aframe.io/releases/1.4.0/aframe.min.js"<span class="s3">&gt;&lt;/script&gt;</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span>&lt;!-- CSS for Light Background --&gt;</p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span><span class="s5">body {</span></p>
+<p class="p2"><span class="Apple-converted-space">            </span>background-color: #f9f9f9; /* Light background for the body */</p>
+<p class="p2"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span>&lt;!-- A-frame Scene --&gt;</p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span>&lt;a-scene&gt;</p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span>&lt;!-- Camera with Movement System --&gt;</p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;a-entity </span>id<span class="s2">="cameraWrapper" </span>movement-controls<span class="s3">&gt;</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a-camera <span class="s1">position</span><span class="s2">="10 20 60" </span><span class="s1">look-at</span><span class="s2">="#origin"</span>&gt;&lt;/a-camera&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a-entity&gt;</p>
+<p class="p6"><br></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span>&lt;!-- Lights for better visibility --&gt;</p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span>&lt;a-light <span class="s1">type</span><span class="s2">="ambient" </span><span class="s1">color</span><span class="s2">="#fff"</span>&gt;&lt;/a-light&gt;</p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>&lt;a-light </span><span class="s1">type</span>="directional" <span class="s1">position</span>="1 1 0" <span class="s1">intensity</span>="0.5"<span class="s3">&gt;&lt;/a-light&gt;</span></p>
+<p class="p6"><br></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span>&lt;!-- Box representing the 3D space --&gt;</p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span>&lt;a-entity <span class="s1">id</span><span class="s2">="origin" </span><span class="s1">position</span><span class="s2">="0 0 0"</span>&gt;&lt;/a-entity&gt;</p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span>&lt;!-- Draw the box with thicker lines and axis labels --&gt;</p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;a-entity </span><span class="s1">line</span>="start: 0 0 0; end: 10 0 0; color: gray; width: 2"<span class="s3">&gt;&lt;/a-entity&gt;</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>&lt;a-entity </span><span class="s1">line</span>="start: 0 0 0; end: 0 50 0; color: gray; width: 2"<span class="s3">&gt;&lt;/a-entity&gt;</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>&lt;a-entity </span><span class="s1">line</span>="start: 0 0 0; end: 0 0 50; color: gray; width: 2"<span class="s3">&gt;&lt;/a-entity&gt;</span></p>
+<p class="p6"><br></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span>&lt;!-- Draw the upper part of the box --&gt;</p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;a-entity </span><span class="s1">line</span>="start: 10 0 0; end: 10 50 0; color: gray; width: 2"<span class="s3">&gt;&lt;/a-entity&gt;</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>&lt;a-entity </span><span class="s1">line</span>="start: 10 50 0; end: 0 50 0; color: gray; width: 2"<span class="s3">&gt;&lt;/a-entity&gt;</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>&lt;a-entity </span><span class="s1">line</span>="start: 10 0 0; end: 10 0 50; color: gray; width: 2"<span class="s3">&gt;&lt;/a-entity&gt;</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>&lt;a-entity </span><span class="s1">line</span>="start: 0 50 0; end: 0 50 50; color: gray; width: 2"<span class="s3">&gt;&lt;/a-entity&gt;</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>&lt;a-entity </span><span class="s1">line</span>="start: 0 0 50; end: 10 0 50; color: gray; width: 2"<span class="s3">&gt;&lt;/a-entity&gt;</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>&lt;a-entity </span><span class="s1">line</span>="start: 0 50 50; end: 10 50 50; color: gray; width: 2"<span class="s3">&gt;&lt;/a-entity&gt;</span></p>
+<p class="p6"><br></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span>&lt;!-- Axis Labels with Proper Orientation and Larger Text --&gt;</p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;a-entity </span><span class="s1">text</span>="value: Year (X-Axis); color: black; width: 100" <span class="s1">position</span>="11 0 0" <span class="s1">rotation</span>="0 90 0"<span class="s3">&gt;&lt;/a-entity&gt; </span><span class="s4">&lt;!-- X-axis Label --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;a-entity </span><span class="s1">text</span>="value: Age (Y-Axis); color: black; width: 100" <span class="s1">position</span>="0 51 0" <span class="s1">rotation</span>="90 0 0"<span class="s3">&gt;&lt;/a-entity&gt; </span><span class="s4">&lt;!-- Y-axis Label --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;a-entity </span><span class="s1">text</span>="value: Watch Time (Z-Axis); color: black; width: 100" <span class="s1">position</span>="0 0 51" <span class="s1">rotation</span>="0 0 0"<span class="s3">&gt;&lt;/a-entity&gt; </span><span class="s4">&lt;!-- Z-axis Label --&gt;</span></p>
+<p class="p7"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;!-- Additional Scatter Points and Data Bars --&gt;</p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span>&lt;script&gt;</p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span>const xp = [1, 1, 2, 3, 4, 5, 6, 7, 8, 9];</p>
+<p class="p2"><span class="Apple-converted-space">            </span>const yp = [1, 21, 4, 5, 5, 41, 12, 35, 18, 27];</p>
+<p class="p2"><span class="Apple-converted-space">            </span>const zp = [10, 20, 30, 40, 45, 50, 15, 25, 35, 45];</p>
+<p class="p8"><br></p>
+<p class="p2"><span class="Apple-converted-space">            </span>for (let i = 0; i &lt; xp.length; i++) {</p>
+<p class="p2"><span class="Apple-converted-space">                </span>const x = xp[i];</p>
+<p class="p2"><span class="Apple-converted-space">                </span>const y = yp[i];</p>
+<p class="p2"><span class="Apple-converted-space">                </span>const z = zp[i];</p>
+<p class="p8"><br></p>
+<p class="p2"><span class="Apple-converted-space">                </span>const sphere = document.createElement('a-entity');</p>
+<p class="p2"><span class="Apple-converted-space">                </span>sphere.setAttribute('geometry', 'primitive: sphere; radius: 0.5');</p>
+<p class="p2"><span class="Apple-converted-space">                </span>sphere.setAttribute('material', 'color: blue; opacity: 0.8');</p>
+<p class="p2"><span class="Apple-converted-space">                </span>sphere.setAttribute('position', `${x} ${y} ${z}`);</p>
+<p class="p8"><br></p>
+<p class="p2"><span class="Apple-converted-space">                </span>const label = document.createElement('a-entity');</p>
+<p class="p2"><span class="Apple-converted-space">                </span>label.setAttribute('text', `value: (${x}, ${y}, ${z}); color: black; width: 40`);</p>
+<p class="p2"><span class="Apple-converted-space">                </span>label.setAttribute('position', `0 1 0`);<span class="Apple-converted-space">  </span>// Slight offset to avoid overlap</p>
+<p class="p2"><span class="Apple-converted-space">                </span>sphere.appendChild(label);</p>
+<p class="p8"><br></p>
+<p class="p2"><span class="Apple-converted-space">                </span>document.querySelector('a-scene').appendChild(sphere);</p>
+<p class="p8"><br></p>
+<p class="p2"><span class="Apple-converted-space">                </span>// Adding vertical cylinder to represent watch time</p>
+<p class="p2"><span class="Apple-converted-space">                </span>const cylinder = document.createElement('a-entity');</p>
+<p class="p2"><span class="Apple-converted-space">                </span>const height = z / 2;<span class="Apple-converted-space">  </span>// Adjust height based on z-axis value</p>
+<p class="p2"><span class="Apple-converted-space">                </span>cylinder.setAttribute('geometry', `primitive: cylinder; radius: 0.20; height: ${height}`);</p>
+<p class="p2"><span class="Apple-converted-space">                </span>cylinder.setAttribute('material', 'color: yellow');</p>
+<p class="p2"><span class="Apple-converted-space">                </span>cylinder.setAttribute('position', `${x} ${y} ${height / 2}`);<span class="Apple-converted-space">  </span>// Position at the middle of the height</p>
+<p class="p2"><span class="Apple-converted-space">                </span>document.querySelector('a-scene').appendChild(cylinder);</p>
+<p class="p2"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span>&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a-scene&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+<p class="p6"><br></p>
+</body>
+</html>
